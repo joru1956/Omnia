@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script language=JavaScript src="js/hlava2.js"></script> 
+        <link rel='stylesheet' type='text/css' href='js/Login.css'>
+        <title>Omnia</title>
+        <meta charset="UTF-8">
+        <meta http-equiv='pragma' content='no-cache'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body bgcolor="#FFFFC0">
+
+        <h1 align="center" style=" font: 30px bold Times New Roman">
+            Omnia
+        </h1>
+         <nav id='menu'></nav>
+        <div align="centre">Login</div>
+ <form action="action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="pic/Te.xcf" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>     </body>
+</html>
