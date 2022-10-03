@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='pragma' content='no-cache'>
+        <script language=JavaScript src="hlava2.js"></script> 
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language=JavaScript type="text/javascript">
+var one = '1';// promenne pro tlacitka
+var two = '2';
+var three = "3";
+var four = "4";
+var five = "5";
+var six = "6";
+var seven = "7";
+var eight = "8";
+var nine = "9";
+var zero = "0";
+var plus = "+";
+var minus = "-";
+var multiply = "*";
+var divide = "/";
+var decimal = ".";
+var pamet = "";
+var lzavorka = "(";
+var rzavorka = ")";
+
+function compute() {// obj je nazev formulare
+if (this.expr.value) this.expr.value = eval(this.expr.value);// pokud je na displayi hodnota – vypocti ji
+}
+function enter(form, string){
+this.expr.value += string;// pridava hodnotu na display
+}
+function mem(form){
+if (this.expr.value) pamet = '('+this.expr.value+')';// co je v pameti prijde do zavorek
+}
+
+            
+        </script>
+	<link href="css/kal-2.css" rel="stylesheet" />
+<body>
+        <script language=JavaScript src="hlava1.js"></script> 
+        <form name="calc" method="post" action="">
+            <table border="2" bgcolor="#add8e6" style="height: 186px; width: 160px" >
+                <tr><td colspan="5"><center>
+                <input name="expr" size="23" action="compute(this.form)">
+                <font size=“-2″>Kalkulačka</font></center></td></tr>
+                <tr><td>
+                <input type="button" value=" 7 " onClick="enter(this.form, seven)" class="male"></td>
+                <td>
+                <input type="button" value=" 8 " onClick="enter(this.form, eight)" class="male"></td>
+                <td>
+                <input type="button" value=" 9 " onClick="enter(this.form, nine)" class="male"></td>
+                <td colspan="2">
+                <input type="button" value=" / " onClick="enter(this.form, divide)" class="male"></td></tr>
+                <tr><td>
+                <input type="button" value=" 4 " onClick="enter(this.form, four)" class="male"></td>
+                <td>
+                <input type="button" value=" 5 " onClick="enter(this.form, five)" class="male"></td>
+                <td>
+                <input type="button" value=" 6 " onClick="enter(this.form, six)" class="male"></td>
+                <td colspan="2">
+                <input type="button" value=" * " onClick="enter(this.form, multiply)" class="male"></td></tr>
+                <tr><td>
+                <input type="button" value=" 1 " onClick="enter(this.form, one)" class="male"></td>
+                <td>
+                <input type="button" value=" 2 " onClick="enter(this.form, two)" class="male"></td>
+                <td>
+                <input type="button" value=" 3 " onClick="enter(this.form, three)" class="male"></td>
+                <td colspan="2">
+                <input type="button" value=" – " onClick="enter(this.form, minus)" class="male"></td></tr>
+                <tr><td colspan="2">
+                <input type="button" value=" 0 " onClick="enter(this.form, zero)" class="velke"></td>
+                <td>
+                <input type="button" value=" . " onClick="enter(this.form, decimal)" class="male"></td>
+                <td colspan="2">
+                <input type="button" value=" + " onClick="enter(this.form, plus)" class="male"></td></tr>
+                <tr><td>
+                <input type="button" value=" M+ " onClick="mem(this.form)" class="male"></td>
+                <td>
+                <input type="button" value=" MR " onClick="enter(this.form, pamet)" class="male"></td>
+                <td>
+                <input type="button" value="CLEAR " onClick="pamet = " class="male"></td>
+                <td>
+                <input type="button" value="(" onClick="enter(this.form, lzavorka)" class="zavorky"></td>
+                <td>
+                <input type="button" value=")" onClick="enter(this.form, rzavorka)" class="zavorky"></td></tr>
+                <tr><td colspan="2">
+                <input type="button" value=" = " onClick="compute(this.form)" class="velke"></td>
+                <td colspan="3">
+                <input type="reset" value=" C " class="velke" name="reset"></td></tr>
+             <tr> 
+	  <td COLSPAN="5" align="center"> 
+             <font size=-2>Pro Vaše poznámky:</font>
+            <textarea NAME="poznamky"
+               ROWS="10"
+               COLS="22"></textarea>
+            </td>
+	</tr>
+            </table>
+        </form>
+    </body>
+</html>

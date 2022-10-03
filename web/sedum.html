@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+<form method="POST" action="kalkulacka.php?akce=pocitej">
+            <input name="prvni" type="text" /><br />
+            <input name="druhe" type="text" /><br />
+            <input type="submit" value="Spočítat" />
+ <input type="file" id="files" name="files[]" multiple />
+<output id="list"></output>
+ 
+<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList objekt
+    // proměnná files je FileList-em souborů.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+ 
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>    
+     
+     </form>
+    
+        <div>TODO write content</div>
+    
+</html>

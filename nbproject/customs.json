@@ -1,0 +1,11 @@
+{
+    "elements": {},
+    "attributes": {
+        "cache-control:": {
+            "context": "meta"
+        },
+        "must-revalidate": {
+            "context": "meta"
+        }
+    }
+}
